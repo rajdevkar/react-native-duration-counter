@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+
+# TypeScript output
+*.js
+*.js.map
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+
+# npm and Yarn
+package-lock.json
+yarn.lock
+
+# IDE and editor specific files
+.idea/
+.vscode/
+
+# macOS system files
+.DS_Store
