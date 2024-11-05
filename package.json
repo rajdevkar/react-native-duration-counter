@@ -1,0 +1,41 @@
+{
+  "name": "react-native-duration-counter",
+  "version": "0.0.1",
+  "description": "A React Native component for displaying and managing elapsed and countdown time.",
+  "main": "index.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rajdevkar/react-native-duration-counter.git"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "react-component",
+    "react-native-component",
+    "ios",
+    "android",
+    "duration",
+    "counter",
+    "timer"
+  ],
+  "author": {
+    "name": "Raj Devkar",
+    "email": "rajdevkar.6@gmail.com"
+  },
+  "homepage": "https://github.com/rajdevkar/react-native-duration-counter#readme",
+  "bugs": {
+    "url": "https://github.com/rajdevkar/react-native-duration-counter.git/issues"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=18.3.1",
+    "react-native": ">=0.75.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4",
+    "react-native": "^0.75.4"
+  },
+  "scripts": {
+    "build": "tsc"
+  }
+}
