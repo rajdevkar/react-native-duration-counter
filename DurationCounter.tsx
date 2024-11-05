@@ -96,5 +96,6 @@ const styles = StyleSheet.create({
   separator: {
     fontSize: 24,
     color: "black",
+    marginHorizontal: 8,
   },
 });
