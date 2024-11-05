@@ -1,6 +1,6 @@
 {
   "name": "react-native-duration-counter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A React Native component for displaying and managing elapsed and countdown time.",
   "main": "index.ts",
   "repository": {
