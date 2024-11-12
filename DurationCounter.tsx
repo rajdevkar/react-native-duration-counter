@@ -8,6 +8,7 @@ interface DurationCounterProps {
   checkInTimestamp?: number;
   /** Determines if the counter counts up from check-in or down from initial time */
   countUp?: boolean;
+  disableCounter?: boolean;
   /** Custom styles */
   containerStyle?: ViewStyle;
   boxStyle?: ViewStyle;
@@ -18,6 +19,7 @@ const DurationCounter: React.FC<DurationCounterProps> = ({
   initialTimeInSeconds = 0,
   checkInTimestamp,
   countUp = true,
+  disableCounter = false,
   containerStyle,
   boxStyle,
   textStyle,
@@ -25,10 +27,12 @@ const DurationCounter: React.FC<DurationCounterProps> = ({
   const [elapsedTime, setElapsedTime] = useState<number>(
     countUp && checkInTimestamp
       ? Math.floor(Date.now() / 1000) - checkInTimestamp
-      : initialTimeInSeconds
+      : initialTimeInSeconds,
   );
 
   useEffect(() => {
+    if (disableCounter) return;
+
     const calculateElapsedTime = () => {
       const now = Math.floor(Date.now() / 1000);
       if (countUp && checkInTimestamp) {
@@ -45,7 +49,7 @@ const DurationCounter: React.FC<DurationCounterProps> = ({
     }, 1000);
 
     return () => clearInterval(intervalId);
-  }, [checkInTimestamp, countUp]);
+  }, [checkInTimestamp, countUp, disableCounter]);
 
   // Calculate hours, minutes, and seconds
   const hours = Math.floor(elapsedTime / 3600)
