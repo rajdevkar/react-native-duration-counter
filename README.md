@@ -32,7 +32,7 @@ import DurationCounter from 'react-native-duration-counter';
 
 export default function App() {
   return (
-    <DurationCounter 
+    <DurationCounter
       checkInTimestamp={1730785509} // Replace with your check-in timestamp
       countUp={true} // Set to true to count up from check-in time
     />
@@ -49,9 +49,9 @@ import DurationCounter from 'react-native-duration-counter';
 
 export default function App() {
   return (
-    <DurationCounter 
+    <DurationCounter
       initialTimeInSeconds={3600} // Countdown from 1 hour
-      countUp={false} 
+      countUp={false}
     />
   );
 }
@@ -139,6 +139,7 @@ console.log(`Countdown Time: ${countdownTime.hours}:${countdownTime.minutes}:${c
 | initialTimeInSeconds | number | No | Initial time in seconds for countdown mode. Only used if countUp is set to false. |
 | checkInTimestamp | number | No | The check-in timestamp (in seconds) for counting up mode. Only used if countUp is set to true. |
 | countUp | boolean | No | Determines if the counter should count up (true) or down (false). Defaults to true. |
+| disableCounter | boolean | No | Disables countdown |
 | containerStyle | ViewStyle | No | Custom style for the container view. |
 | boxStyle | ViewStyle | No | Custom style for each time unit box (hours, minutes, seconds). |
 | textStyle | TextStyle | No | Custom style for the text inside each time unit box. |
