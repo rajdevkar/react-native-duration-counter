@@ -31,7 +31,12 @@ const DurationCounter: React.FC<DurationCounterProps> = ({
   );
 
   useEffect(() => {
-    if (disableCounter) return;
+    if (disableCounter) {
+      if (checkInTimestamp) {
+        setElapsedTime(Math.floor(Date.now() / 1000) - checkInTimestamp);
+      }
+      return;
+    }
 
     const calculateElapsedTime = () => {
       const now = Math.floor(Date.now() / 1000);
